@@ -23,17 +23,6 @@
   
 </p>
 
-## Demo 
-
-
-[Demo Video 1](D:\PROJECTS\Minor Projects\Supply-Chain-Blockchain-master\Demo videos\Demo Video 1.mp4)
-
-[Demo Video 2](D:\PROJECTS\Minor Projects\Supply-Chain-Blockchain-master\Demo videos\Demo Video 2.mp4)
-
-[Demo Video 3](D:\PROJECTS\Minor Projects\Supply-Chain-Blockchain-master\Demo videos\Demo Video 3.mp4)
-
-[Demo Video 4](D:\PROJECTS\Minor Projects\Supply-Chain-Blockchain-master\Demo videos\Demo Video 4.mp4)
-
 
 
 ## Description
