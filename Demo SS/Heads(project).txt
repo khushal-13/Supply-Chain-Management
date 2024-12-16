@@ -1,0 +1,28 @@
+1. Introductions
+2. Literature survey 
+3. Propsode Methodology
+4. Technologies used 
+ >Blockchain
+   >Smart contract
+       > Solidity 
+  >Truffle(Definations And code in report )
+  >Web3 (Definations)
+  >ganache(Definations & Picture)
+  >MetaMask(Definations)
+  >React js (Definations)
+5. Implementations
+6. Beneifits using the project :
+   >Reduced costs
+        Blockchain can reduce processing costs, contracting costs, and lead times.
+   >Improved security
+        Blockchain offers enhanced security and traceability, allowing systems to track, trace, and recall products.
+   >Supply chain governance
+        Blockchain can improve collaboration within the supply chain and with other stakeholders.
+   >Transparency
+        Blockchain's decentralized nature ensures that every participant has real-time access to an immutable record           of each transaction. 
+
+
+7. Future Scope 
+8. Scope of imporvement 
+9. Need of the market
+10.Conclusion
