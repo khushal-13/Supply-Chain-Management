@@ -3,7 +3,7 @@ hr{
     top: 20px;
     border: none;   
     height: 12px;
-    background: black;
+    background: rgb(0, 0, 0);
 }
 .wait{
     text-align: center;
