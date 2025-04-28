@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import Web3 from "web3";
 import SupplyChainABI from "./artifacts/SupplyChain.json"
 import { QRCodeCanvas } from 'qrcode.react';
-import './Track.css';
+import './css/Track.css';
 
 function Track() {
     const history = useHistory()

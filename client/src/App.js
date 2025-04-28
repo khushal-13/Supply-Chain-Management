@@ -4,7 +4,7 @@ import AddMed from './AddMed';
 import Supply from './Supply'
 import Track from './Track'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import './App.css';
+import './css/App.css';
 
 function App() {
   return (

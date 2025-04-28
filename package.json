@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "truffle": "^5.7.4"
+    "source-map-loader": "^5.0.0",
+    "truffle": "^5.7.4",
+    "web3": "^4.16.0"
   }
 }
