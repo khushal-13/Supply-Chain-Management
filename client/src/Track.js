@@ -61,6 +61,7 @@ function Track() {
                 medStage[i + 1] = await supplychain.methods.showStage(i + 1).call();
             }
             setMED(med);
+            console.log(med);
             setMedStage(medStage);
             const rmsCtr = await supplychain.methods.rmsCtr().call();
             const rms = {};
@@ -103,8 +104,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3>
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -118,28 +119,28 @@ function Track() {
 
                     <article className="col-3">
                         <h4><u>Raw Materials Supplied by:</u></h4>
-                        <p><b>Supplier ID: </b>{RMS[MED[ID].RMSid].id}</p>
+                        <p><b>Supplier ID: </b>{Number(RMS[MED[ID].RMSid].id)}</p>
                         <p><b>Name:</b> {RMS[MED[ID].RMSid].name}</p>
                         <p><b>Place: </b>{RMS[MED[ID].RMSid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Manufactured by:</u></h4>
-                        <p><b>Manufacturer ID: </b>{MAN[MED[ID].MANid].id}</p>
+                        <p><b>Manufacturer ID: </b>{Number(MAN[MED[ID].MANid].id)}</p>
                         <p><b>Name:</b> {MAN[MED[ID].MANid].name}</p>
                         <p><b>Place: </b>{MAN[MED[ID].MANid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Distributed by:</u></h4>
-                        <p><b>Distributor ID: </b>{DIS[MED[ID].DISid].id}</p>
+                        <p><b>Distributor ID: </b>{Number(DIS[MED[ID].DISid].id)}</p>
                         <p><b>Name:</b> {DIS[MED[ID].DISid].name}</p>
                         <p><b>Place: </b>{DIS[MED[ID].DISid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Retailed by:</u></h4>
-                        <p><b>Retailer ID: </b>{RET[MED[ID].RETid].id}</p>
+                        <p><b>Retailer ID: </b>{Number(RET[MED[ID].RETid].id)}</p>
                         <p><b>Name:</b> {RET[MED[ID].RETid].name}</p>
                         <p><b>Place: </b>{RET[MED[ID].RETid].place}</p>
                     </article>
@@ -153,7 +154,7 @@ function Track() {
                 }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                 <span onClick={() => {
                     history.push('/')
-                }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
             </div >
         )
     }
@@ -161,8 +162,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3>
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -176,28 +177,28 @@ function Track() {
 
                     <article className="col-3">
                         <h4><u>Raw Materials Supplied by:</u></h4>
-                        <p><b>Supplier ID: </b>{RMS[MED[ID].RMSid].id}</p>
+                        <p><b>Supplier ID: </b>{Number(RMS[MED[ID].RMSid].id)}</p>
                         <p><b>Name:</b> {RMS[MED[ID].RMSid].name}</p>
                         <p><b>Place: </b>{RMS[MED[ID].RMSid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Manufactured by:</u></h4>
-                        <p><b>Manufacturer ID: </b>{MAN[MED[ID].MANid].id}</p>
+                        <p><b>Manufacturer ID: </b>{Number(MAN[MED[ID].MANid].id)}</p>
                         <p><b>Name:</b> {MAN[MED[ID].MANid].name}</p>
                         <p><b>Place: </b>{MAN[MED[ID].MANid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Distributed by:</u></h4>
-                        <p><b>Distributor ID: </b>{DIS[MED[ID].DISid].id}</p>
+                        <p><b>Distributor ID: </b>{Number(DIS[MED[ID].DISid].id)}</p>
                         <p><b>Name:</b> {DIS[MED[ID].DISid].name}</p>
                         <p><b>Place: </b>{DIS[MED[ID].DISid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Retailed by:</u></h4>
-                        <p><b>Retailer ID: </b>{RET[MED[ID].RETid].id}</p>
+                        <p><b>Retailer ID: </b>{Number(RET[MED[ID].RETid].id)}</p>
                         <p><b>Name:</b> {RET[MED[ID].RETid].name}</p>
                         <p><b>Place: </b>{RET[MED[ID].RETid].place}</p>
                     </article>
@@ -207,7 +208,7 @@ function Track() {
                 }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                 <span onClick={() => {
                     history.push('/')
-                }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
             </div >
         )
     }
@@ -215,8 +216,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3> 
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -230,21 +231,21 @@ function Track() {
 
                     <article className="col-3">
                         <h4><u>Raw Materials Supplied by:</u></h4>
-                        <p><b>Supplier ID: </b>{RMS[MED[ID].RMSid].id}</p>
+                        <p><b>Supplier ID: </b>{Number(RMS[MED[ID].RMSid].id)}</p>
                         <p><b>Name:</b> {RMS[MED[ID].RMSid].name}</p>
                         <p><b>Place: </b>{RMS[MED[ID].RMSid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Manufactured by:</u></h4>
-                        <p><b>Manufacturer ID: </b>{MAN[MED[ID].MANid].id}</p>
+                        <p><b>Manufacturer ID: </b>{Number(MAN[MED[ID].MANid].id)}</p>
                         <p><b>Name:</b> {MAN[MED[ID].MANid].name}</p>
                         <p><b>Place: </b>{MAN[MED[ID].MANid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Distributed by:</u></h4>
-                        <p><b>Distributor ID: </b>{DIS[MED[ID].DISid].id}</p>
+                        <p><b>Distributor ID: </b>{Number(DIS[MED[ID].DISid].id)}</p>
                         <p><b>Name:</b> {DIS[MED[ID].DISid].name}</p>
                         <p><b>Place: </b>{DIS[MED[ID].DISid].place}</p>
                     </article>
@@ -254,7 +255,7 @@ function Track() {
                 }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                 <span onClick={() => {
                     history.push('/')
-                }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
             </div >
         )
     }
@@ -262,8 +263,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3> 
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -277,14 +278,14 @@ function Track() {
 
                     <article className="col-3">
                         <h4><u>Raw Materials Supplied by:</u></h4>
-                        <p><b>Supplier ID: </b>{RMS[MED[ID].RMSid].id}</p>
+                        <p><b>Supplier ID: </b>{Number(RMS[MED[ID].RMSid].id)}</p>
                         <p><b>Name:</b> {RMS[MED[ID].RMSid].name}</p>
                         <p><b>Place: </b>{RMS[MED[ID].RMSid].place}</p>
                     </article>
                     <span>&#10132;</span>
                     <article className="col-3">
                         <h4><u>Manufactured by:</u></h4>
-                        <p><b>Manufacturer ID: </b>{MAN[MED[ID].MANid].id}</p>
+                        <p><b>Manufacturer ID: </b>{Number(MAN[MED[ID].MANid].id)}</p>
                         <p><b>Name:</b> {MAN[MED[ID].MANid].name}</p>
                         <p><b>Place: </b>{MAN[MED[ID].MANid].place}</p>
                     </article>
@@ -294,7 +295,7 @@ function Track() {
                 }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                 <span onClick={() => {
                     history.push('/')
-                }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
             </div >
         )
     }
@@ -302,8 +303,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3>
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -317,7 +318,7 @@ function Track() {
 
                     <article className="col-3">
                         <h4><u>Raw Materials Supplied by:</u></h4>
-                        <p><b>Supplier ID: </b>{RMS[MED[ID].RMSid].id}</p>
+                        <p><b>Supplier ID: </b>{Number(RMS[MED[ID].RMSid].id)}</p>
                         <p><b>Name:</b> {RMS[MED[ID].RMSid].name}</p>
                         <p><b>Place: </b>{RMS[MED[ID].RMSid].place}</p>
                     </article>
@@ -327,7 +328,7 @@ function Track() {
                 }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                 <span onClick={() => {
                     history.push('/')
-                }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
             </div >
         )
     }
@@ -343,8 +344,8 @@ function Track() {
         return (
             <div className="container-xl">
                 <article className="col-4">
-                    <h3><b><u>Battery:</u></b></h3>
-                    <span><b>Battery ID: </b>{MED[ID].id}</span>
+                    <h3><b><u>Medicine:</u></b></h3>
+                    <span><b>Medicine ID: </b>{Number(MED[ID].id)}</span>
                     <br />
                     <span><b>Name:</b> {MED[ID].name}</span>
                     <br />
@@ -353,13 +354,13 @@ function Track() {
                     <span><b>Current stage: </b>{MedStage[ID]}</span>
                     <hr />
                     <br />
-                    <h5>Battery Not Yet Processed...</h5>
+                    <h5>Medicine Not Yet Processed...</h5>
                     <button onClick={() => {
                         showTrackTillOrdered(false);
                     }} className="btn btn-outline-success btn-sm">Track Another Item</button>
                     <span onClick={() => {
                         history.push('/')
-                    }} className="btn btn-outline-danger btn-sm"> HOME</span>
+                    }} className="btn btn-outline-danger btn-sm home-button"> HOME</span>
                 </article>
                 {/* <section className="row">
                     
@@ -389,7 +390,7 @@ function Track() {
         event.preventDefault();
         var ctr = await SupplyChain.methods.medicineCtr().call();
         if (!((ID > 0) && (ID <= ctr)))
-            alert("Invalid Battery ID!!!");
+            alert("Invalid Medicine ID!!!");
         else {
             // eslint-disable-next-line
             if (MED[ID].stage == 5)
@@ -419,7 +420,7 @@ function Track() {
             <table className="table table-sm table-bordered">
                 <thead>
                     <tr>
-                        <th scope="col">Battery ID</th>
+                        <th scope="col">Medicine ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Current Processing Stage</th>
@@ -429,7 +430,7 @@ function Track() {
                     {Object.keys(MED).map(function (key) {
                         return (
                             <tr key={key}>
-                                <td>{MED[key].id}</td>
+                                <td>{Number(MED[key].id)}</td>
                                 <td>{MED[key].name}</td>
                                 <td>{MED[key].description}</td>
                                 <td>
@@ -442,10 +443,10 @@ function Track() {
                     })}
                 </tbody>
             </table>
-            <h5>Enter Battery ID to Track it</h5>
+            <h5>Enter Medicine ID to Track it</h5>
 
             <form onSubmit={handlerSubmit}>
-                <input className="form-control-sm" type="text" onChange={handlerChangeID} placeholder="Enter Battery ID" required />
+                <input className="form-control-sm" type="text" onChange={handlerChangeID} placeholder="Enter Medicine ID" required />
                 <button className="btn btn-outline-success btn-sm" onSubmit={handlerSubmit}>Track</button>
             </form>
         </div>

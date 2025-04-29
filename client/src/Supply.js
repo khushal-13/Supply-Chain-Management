@@ -62,6 +62,7 @@ function Supply() {
     };
 
     const handlerChangeID = (event) => {
+        console.log(event.target.value);
         setID(event.target.value);
     };
 
@@ -158,7 +159,7 @@ function Supply() {
                 <tbody>
                     {Object.keys(MED).map(key => (
                         <tr key={key}>
-                            <td>{MED[key].id}</td>
+                            <td>{Number(MED[key].id)}</td>
                             <td>{MED[key].name}</td>
                             <td>{MED[key].description}</td>
                             <td>{MedStage[key]}</td>

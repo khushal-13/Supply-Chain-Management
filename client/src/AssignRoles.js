@@ -185,7 +185,7 @@ function AssignRoles() {
                         <tbody>
                             {roles[roleType].map((role, index) => (
                                 <tr key={index}>
-                                    <td>{role.id}</td>
+                                    <td>{Number(role.id)}</td> 
                                     <td>{role.name}</td>
                                     <td>{role.place}</td>
                                     <td>{role.addr}</td>

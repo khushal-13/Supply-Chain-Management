@@ -115,7 +115,7 @@ function AddMed() {
                     {Object.keys(MED).map(function (key) {
                         return (
                             <tr key={key}>
-                                <td>{MED[key].id}</td>
+                                <td>{Number(MED[key].id)}</td>
                                 <td>{MED[key].name}</td>
                                 <td>{MED[key].description}</td>
                                 <td>
